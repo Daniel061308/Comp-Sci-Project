@@ -3,5 +3,14 @@ Then give the user 2 options: "Admin" and "Shop"
 If Admin, make a section where a password is needed. (optional fail limit).
 If successfully types out password, then open the shopping menu. (should be nothing there because there is no items).
 Then the user can choose to exit. (loop)
-If the user chooses Shop, then open 3 or more options for the user to shop. Like sports, clothings, and books.
-
+If the user chooses Shop, then open 3 or more options for the user to shop. Like sports, clothings, and books. (Also one option
+for shopping cart, so the user can go to the shopping cart whenever he wants)
+After the user chooses an option, load some stuff for the user to see. Then if there is something the user wants, the
+user will select it and will then be loaded into the shopping cart.
+User can exit from one to another, and take items one place to another.
+Once user is finished shopping, the user can go to the shopping cart and check out. showing that user has bought the followings.
+When user checks out, the items will be saved and goes back to the menu.
+NOW, the admin will be able to see what the customers bought from the store. 
+Admin can then choose the user to see what items they have selected.
+Admin can then CHOOSE the user's items for shipping. (Optional: shipping fee, location)
+after the admin ships out, the admin can choose another user (Optional: let the admin select multiple things at once)
