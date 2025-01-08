@@ -1,7 +1,7 @@
-import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
-        
+Start the code with a welcome message introducing the shop.
+Then give the user 2 options: "Admin" and "Shop"
+If Admin, make a section where a password is needed. (optional fail limit).
+If successfully types out password, then open the shopping menu. (should be nothing there because there is no items).
+Then the user can choose to exit. (loop)
+If the user chooses Shop, then open 3 or more options for the user to shop. Like sports, clothings, and books.
 
-    }
-}
