@@ -10,7 +10,7 @@ public class Main {
         final String ADMIN_PASS = "Hello World";
         boolean running = true;
         while (running) {
-            System.out.println("\nWelcome to the Shop!");
+            System.out.println("Welcome to the Shop!");
             System.out.println("1. Admin");
             System.out.println("2. Shop");
             System.out.println("3. Exit");
@@ -38,15 +38,15 @@ public class Main {
             } else if (MainChoice == 2) {
                 boolean shopping = true;
                 while (shopping) {
-                    System.out.println("\nShop Categories:");
+                    System.out.println("Shop Categories:");
                     System.out.println("1. Sports");
                     System.out.println("2. Clothing");
                     System.out.println("3. Books");
                     System.out.println("4. Shopping Cart");
                     System.out.println("5. Exit to Main Menu");
                     System.out.print("Choose a category: ");
-
                     int shopChoice = sc.nextInt();
+                    //need to add how much each item will be costed and what type of items will be in each category.
                 }
             }
         }
