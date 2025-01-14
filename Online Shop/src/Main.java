@@ -1,12 +1,22 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
-public class Main {
-
+public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArrayList<String> cart = new ArrayList<String>();
+        ArrayList<String> cartName = new ArrayList<String>();
+        ArrayList<String> cartQuantity = new ArrayList<String>();
         ArrayList<String> History = new ArrayList<String>();
+
+        ArrayList<String> sportProductName = new ArrayList<String>();
+        ArrayList<Integer> sportProductAvailibity = new ArrayList<Integer>();
+
+        ArrayList<String> clothingProductName = new ArrayList<String>();
+        ArrayList<Integer> clothingProductAvailibity = new ArrayList<Integer>();
+
+        ArrayList<String> bookProductName = new ArrayList<String>();
+        ArrayList<Integer> bookProductAvailibity = new ArrayList<Integer>();
+
+
         final String ADMIN_PASS = "Hello World";
         boolean running = true;
         while (running) {
@@ -15,13 +25,10 @@ public class Main {
             System.out.println("2. Shop");
             System.out.println("3. Exit");
             System.out.print("Choose an option: ");
-
             int MainChoice = sc.nextInt();
-
             if (MainChoice == 1) {
                 System.out.print("Enter admin password: ");
                 String password = sc.nextLine();
-
                 if (!password.equals(ADMIN_PASS)) {
                     System.out.println("Incorrect password. Returning to main menu...");
                 } else {
@@ -45,12 +52,16 @@ public class Main {
                     System.out.println("4. Shopping Cart");
                     System.out.println("5. Exit to Main Menu");
                     System.out.print("Choose a category: ");
+                    //start from here, and make the functionality for each shop category and the shopping cart within the while (shopping)
+                    //loop, including item selection, adding to the cart, and navigating back to the main menu.
                     int shopChoice = sc.nextInt();
-                    //need to add how much each item will be costed and what type of items will be in each category.
                 }
+            } else if (MainChoice == 3) {
+                System.out.println("Thanks for shopping.");
+                running = false;
+            } else {
+                System.out.println("Invalid input.");
             }
         }
     }
 }
-
-                    
