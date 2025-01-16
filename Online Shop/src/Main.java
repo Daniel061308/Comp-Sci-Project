@@ -213,9 +213,63 @@ public class Main {
                             cartItemNumber.clear();
                             cartPrice.clear();
                             System.out.println("Thank you for your purchase!");
-                        } else if (CheckChoice == 2) {
-                            // Update cart
-                        } else if (CheckChoice == 3) {
+                        }else if (CheckChoice == 2) {
+                            if (cartName.isEmpty()) {
+                                System.out.println("Your cart is empty!");
+                        } else {
+                            System.out.println("Select an item to update:");
+                            for (int ii = 0; ii < cartName.size(); ii++) {
+                                System.out.printf("%d. %s - Quantity: %d%n", ii + 1, cartName.get(ii), cartQuantity.get(ii));
+                            }
+                            System.out.print("Enter the number of the item you want to update: ");
+                            int itemToUpdate = sc.nextInt();
+        
+                            if (itemToUpdate >= 1 && itemToUpdate <= cartName.size()) {
+                                int index = itemToUpdate - 1;
+                                System.out.printf("You selected: %s%n", cartName.get(index));
+                                System.out.printf("Current quantity: %d%n", cartQuantity.get(index));
+                                System.out.print("How many do you want to remove? (Enter 0 to cancel): ");
+                                int amountToRemove = sc.nextInt();
+            
+                                if (amountToRemove == 0) {
+                                    System.out.println("Update cancelled.");
+                                } else if (amountToRemove > cartQuantity.get(index)) {
+                                    System.out.println("You cannot remove more items than you have in your cart.");
+                                } else {
+                                    int newQuantity = cartQuantity.get(index) - amountToRemove;
+                                    int category = cartCategory.get(index);
+                                    int itemNumber = cartItemNumber.get(index);
+
+                                    // Update availability in the original product list
+                                 if (category == 0) { // Sports
+                                        sportProductAvailibity.set(itemNumber, sportProductAvailibity.get(itemNumber) + amountToRemove);
+                                } else if (category == 1) { // Clothing
+                                    clothingProductAvailibity.set(itemNumber, clothingProductAvailibity.get(itemNumber) + amountToRemove);
+                                } else if (category == 2) { // Books
+                                    bookProductAvailibity.set(itemNumber, bookProductAvailibity.get(itemNumber) + amountToRemove);
+                                }
+                                // Update cart
+                                cartQuantity.set(index, newQuantity);
+                                int pricePerItem = cartPrice.get(index) / (cartQuantity.get(index) + amountToRemove); // Original price per item
+                                cartPrice.set(index, pricePerItem * newQuantity);
+                                if (newQuantity == 0) {
+                                 // If quantity becomes zero, remove the item from the cart
+                                    cartName.remove(index);
+                                    cartQuantity.remove(index);
+                                    cartCategory.remove(index);
+                                    cartItemNumber.remove(index);
+                                    cartPrice.remove(index);
+                                    System.out.println("Item removed from cart.");
+                                } else {
+                                    System.out.printf("Removed %d items. New quantity: %d%n", amountToRemove, newQuantity);
+                                }
+                            }
+                        } else {
+                            System.out.println("Invalid item number.");
+                                }
+                        }
+                    } else if (CheckChoice == 3) {
+                            System.out.println("Returning to shopping menu...");
                         }
                     } else if (shopChoice == 5) {
                         shopping = false;
