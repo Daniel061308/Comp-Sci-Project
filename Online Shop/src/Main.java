@@ -14,37 +14,47 @@ public class Main {
         ArrayList<String> sportProductName = new ArrayList<String>();
         sportProductName.add("mask");
         sportProductName.add("boots");
+        sportProductName.add("glove");
         ArrayList<Integer> sportProductAvailibity = new ArrayList<Integer>();
         sportProductAvailibity.add(1);
         sportProductAvailibity.add(3);
+        sportProductAvailibity.add(20);
+        
         ArrayList<Integer> sportProductPrice = new ArrayList<Integer>();
         sportProductPrice.add(10);
         sportProductPrice.add(30);
+        sportProductPrice.add(40);
 
         ArrayList<String> clothingProductName = new ArrayList<String>();
         clothingProductName.add("hat");
         clothingProductName.add("shoe");
+        clothingProductName.add("Roman Armour");
         ArrayList<Integer> clothingProductAvailibity = new ArrayList<Integer>();
         clothingProductAvailibity.add(1);
         clothingProductAvailibity.add(10);
+        clothingProductAvailibity.add(15);
         ArrayList<Integer> clothingProductPrice = new ArrayList<Integer>(); // Added price for clothing
         clothingProductPrice.add(5);  // Example price for hat
         clothingProductPrice.add(20); // Example price for shoe
+        clothingProductPrice.add(999);
 
         ArrayList<String> bookProductName = new ArrayList<String>();
-        bookProductName.add("book1");
-        bookProductName.add("book3");
+        bookProductName.add("Orb of Pinnacle");
+        bookProductName.add("God's Flames");
+        bookProductName.add("Super Super");
         ArrayList<Integer> bookProductAvailibity = new ArrayList<Integer>();
         bookProductAvailibity.add(1);
         bookProductAvailibity.add(2);
+        bookProductAvailibity.add(10);
         ArrayList<Integer> bookProductPrice = new ArrayList<Integer>(); // Added price for books
         bookProductPrice.add(15);  // Example price for book1
         bookProductPrice.add(25);  // Example price for book3
+        bookProductPrice.add(10);
 
-        String ADMIN_PASS = "Hello World";
+        String ADMIN_PASS = "The Solitude Worker";
         boolean running = true;
         while (running) {
-            System.out.println("Welcome to the Shop!");
+            System.out.println("Welcome to the Amazon 2.0! press 1 or 2 or 3");
             System.out.println("1. Admin");
             System.out.println("2. Shop");
             System.out.println("3. Exit");
@@ -70,7 +80,7 @@ public class Main {
             } else if (MainChoice == 2) {
                 boolean shopping = true;
                 while (shopping) {
-                    System.out.println("Shop Categories:");
+                    System.out.println("Shop Categories: (Integer)");
                     System.out.println("1. Sports");
                     System.out.println("2. Clothing");
                     System.out.println("3. Books");
